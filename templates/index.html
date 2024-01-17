@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eve Buyback</title>
+    <link rel="stylesheet" href="static/css/style.css" />
+</head>
+<body>
+  <div id="app-header" style="text-align: center; font-size: 32pt">EVE Buyback Appraisal</div>
+  <div id="sub-header" style="text-align: center; font-size: 26pt; padding: 10px">
+      the <span style="font-weight: bold">biggest</span> buyback in New Eden
+  </div>
+<div class="container-row">
+    <div class="container-column" id="instruct">
+      <p style="padding: 6px; text-align: center">
+        INSTRUCTIONS PLEASE READ
+      </p>
+      <p class="instruct">
+          <span style="font-weight: bold"> Repackage all items prior to submission, including ships.</span>
+      </p>
+      <p class="instruct">
+          1. First<span style="font-weight: bold"> repackage </span>all items and <span style="font-weight: bold">select</span> them.
+      </p>
+      <p class="instruct">
+          2. Press ctrl+c (copy).
+      </p>
+      <p class="instruct">
+          3. With the cursor in the textbox press ctrl+v (paste).
+      </p>
+      <p class="instruct">
+          4. Hit 'get prices bitch'.
+      </p>
+      <p class="instruct">
+          5. Wait a sec.
+      </p>
+      <p class="instruct">
+          6. Copy the <span style="font-weight: bold">contract price</span>.
+      </p>
+      <p class="instruct">
+          7. <span style="font-weight: bold">Create </span> a contract to the corp listed.
+      </p>
+      <p class="instruct">
+          8. <span style="font-weight: bold">Enter </span> price into the contract and hit accept.
+      </p>
+      <p class="instruct">
+          9. Watch your wallet get fat.
+      </p>
+    </div>
+    <div class="container-column" id="text-area">
+        <form method="post" action={{ url_for("get_appraisal") }}>
+            <div id="text-area-header" style="padding: 6px; background-color: #646262; margin-bottom: 6px">
+                Paste items below.
+            </div>
+            <div>
+                <textarea name="appraisal-items" style="width: 99.5%; height: 728px"></textarea>
+            </div>
+            <div>
+                <button id="items-submit" type="submit" name="order-type" value="buy">get prices bitch</button>
+            </div>
+        </form>
+    </div>
+    <div class="container-column">
+        <div id="appraisal-header" style="padding: 6px; background-color: #646262; margin-bottom: 5px">
+            Appraisal below.
+        </div>
+        <div id="appraisal-display"> <div id="item-info" style="height: 728px; overflow-y: auto">
+              {% block price_disp %} {% endblock %} </div>
+        </div>
+    </div>
+    <div class="container-column">
+        <div id="extra-div">
+              Benefits of using Magnum Dong
+              <p>
+                  The name is funny as hell, quite possibly the best buyback name in existence.
+              </p>
+              <hr>
+              <p>
+                  We offer no hassle buying of your items throughout lowsec and nullsec with zero hidden charges and prompt
+                  service.
+              </p>
+              <hr>
+              <p>
+                  Our prices are updated twice daily, and we pay 90% of the Jita 4-4 buy price.
+              </p>
+              <hr>
+              <p>
+                  Avoid <span style="font-weight: bold">worrying</span> about planning your route or getting ganked by nasty
+                  pirates and losing all of your shinies.
+              </p>
+              <hr>
+              <p>
+                  Most importantly, save <span style="font-weight: bold">time</span> and
+                  play more - contract with us today and receive your isk as soon as the contract is received!
+              </p>
+        </div>
+    </div>
+    <div style="margin: auto; width: 13%">
+        <img src="static/images/dong.png" alt="dong"></div>
+
+</body>
+</html>

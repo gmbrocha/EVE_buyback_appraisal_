@@ -1,0 +1,84 @@
+/*todo: please change this god awful font*/
+@font-face {
+  font-family: "spantaran";
+  src: url("Spantaran-GE2D.ttf") format("truetype");
+}
+
+html {
+    font-family: Helvetica, sans-serif;
+    /*background-color: #262626;*/
+    background-color: #646262;
+}
+
+body {
+    font-size: 11pt;
+    color: white;
+}
+
+.container-column {
+    float: left;
+    width: 24.5%;
+    margin: 12px;
+}
+
+.container-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#instruct {
+    text-align: center;
+    border-radius: 3px;
+    height: 770px;
+    background-color: #3d3a3a;
+    margin: 6px;
+}
+
+.instruct {
+    height: 60px;
+}
+
+#app-header {
+    font-size: 22pt;
+    font-family: spantaran, sans-serif;
+    padding: 4px;
+    margin-top: 15px;
+    margin-bottom: 2px;
+    margin-left: 6px;
+}
+
+#sub-header {
+    margin-bottom: 8px;
+}
+
+#text-area-header {
+    border-radius: 3px;
+}
+
+#text-area {
+    margin: 6px;
+}
+
+#appraisal-header {
+    border-radius: 3px;
+    margin-left: 6px;
+}
+
+#appraisal-display {
+    overflow-y: auto;
+}
+
+#item-info {
+    padding: 6px;
+}
+
+#extra-div {
+    padding: 10px;
+    text-align: center;
+    line-height: 60px;
+    background-color: #3d3a3a;
+    border-radius: 3px;
+    height: 770px;
+    margin-left: 4px;
+}
